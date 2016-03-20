@@ -1,3 +1,5 @@
+/* add gameboard and squares hover */
+
 body {
   background: #b38b6d;
   font-family: Avenir;
@@ -13,9 +15,14 @@ body {
 
 }
 
+#gameboard {
+  list-style: none;
+}
+
 .box {
-  border: 1px solid black;
+  border: 3px solid black;
   height: 150px;
+  border-radius: 5px;
 }
 
 #message {

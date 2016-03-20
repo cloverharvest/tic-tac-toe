@@ -28,31 +28,27 @@
         </div>
       </div>
       <div class="row">
-        <div id="message">The messages will go here</div>
+        <div id="message">Hello!</div>
         <!-- a column represents our game board -->
         <!-- the `offset` class helps us center the board -->
         <div class="col-md-6 col-md-offset-3" id="board">
 
           <!-- you can put rows inside of columns! -->
           <!-- Bootstrap subdivides these 'nested' rows into 12 columns, too! -->
-          <div class="row">
-            <div class="col-md-4 box">a</div>
-            <div class="col-md-4 box">a</div>
-            <div class="col-md-4 box">a</div>
-          </div>
-          <div class="row">
-            <div class="col-md-4 box">a</div>
-            <div class="col-md-4 box">a</div>
-            <div class="col-md-4 box">a</div>
-          </div>
-          <div class="row">
-            <div class="col-md-4 box">a</div>
-            <div class="col-md-4 box">a</div>
-            <div class="col-md-4 box">a</div>
-          </div>
+          <ul id="gameboard">
+            <li class="col-md-4 box" id="square1"></li>
+            <li class="col-md-4 box" id="square2"></li>
+            <li class="col-md-4 box" id="square3"></li>
+            <li class="col-md-4 box" id="square4"></li>
+            <li class="col-md-4 box" id="square5"></li>
+            <li class="col-md-4 box" id="square6"></li>
+            <li class="col-md-4 box" id="square7"></li>
+            <li class="col-md-4 box" id="square8"></li>
+            <li class="col-md-4 box" id="square9"></li>
+          </ul>
       </div>
 
-      <div class="clearfix"></div>
+      <div class ="clearfix"> </div>
       </div id="centerme">
         <button id="reset">Clear the Board</button>
       </div>
