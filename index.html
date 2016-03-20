@@ -10,11 +10,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
     <!-- link to custom stylesheet (always require after Bootstrap) -->
-
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <!-- jQuery from CDN -->
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
     <!-- link to custom javascript file (always require after external JS libraries) -->
+    <script type="text/javascript" src="js/app.js"></script>
 
     <title>Tic Tac Toe</title>
   </head>
@@ -27,7 +28,7 @@
         </div>
       </div>
       <div class="row">
-
+        <div id="message">The messages will go here</div>
         <!-- a column represents our game board -->
         <!-- the `offset` class helps us center the board -->
         <div class="col-md-6 col-md-offset-3" id="board">
@@ -39,10 +40,21 @@
             <div class="col-md-4 box">a</div>
             <div class="col-md-4 box">a</div>
           </div>
+          <div class="row">
+            <div class="col-md-4 box">a</div>
+            <div class="col-md-4 box">a</div>
+            <div class="col-md-4 box">a</div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 box">a</div>
+            <div class="col-md-4 box">a</div>
+            <div class="col-md-4 box">a</div>
+          </div>
+      </div>
 
-
-
-        </div>
+      <div class="clearfix"></div>
+      </div id="centerme">
+        <button id="reset">Clear the Board</button>
       </div>
     </div>
   </body>
