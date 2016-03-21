@@ -72,22 +72,22 @@ $(".box").click(function winChecker() {
   } else if
     ( $("#square1").text() === "Y" && //horizontalY
     $("#square2").text() === "Y" &&
-    $("square3"),text() === "Y" ) {
+    $("square3").text() === "Y" ) {
       $("#message").text("Player Y wins.");
   } else if
     ( $("#square4").text() === "Y" &&
     $("#square5").text() === "Y" &&
-    $("square6"),text() === "Y" ) {
+    $("square6").text() === "Y" ) {
       $("#message").text("Player Y wins.");
   } else if
     ( $("#square7").text() === "Y" &&
     $("#square8").text() === "Y" &&
-    $("square9"),text() === "Y" ) {
+    $("square9").text() === "Y" ) {
       $("#message").text("Player Y wins.");
   } else if
     ( $("#square1").text() === "Y" && //verticalY
     $("#square4").text() === "Y" &&
-    $("square7"),text() === "Y" ) {
+    $("square7").text() === "Y" ) {
       $("#message").text("Player Y wins.");
   } else if
     ( $("#square2").text() === "Y" &&
