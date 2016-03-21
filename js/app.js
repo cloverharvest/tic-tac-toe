@@ -1,54 +1,118 @@
-// wait for the DOM to finish loading
+//Issues:
+//Does not stop after 9 moves
+//Not able to declare winner
+//Need to make X and O bigger
+
 $(document).ready(function() {
 
   var $square = $(".box");
-  //var boxes = squares.eq(0);
-  var turn;
+  var turnCount = 0;
 
 //("#square1, #square2, #square3, #square4, #square5, #square6, #square7, #square8, #square9")
-  //TurnTaker
-  $(".box").on("click", function turnTaker() {
+//TurnTaker
+  $(".box").click(function turnTaker() {
     var square = $(this);
-      if (turn === 0) {
-        turn = 1;
-        square.text("X");
-      } else {
-        turn = 0;
-        square.text("O");
-      }
-  });
-
-  //Resets the board after a winner is reached
-  $("#reset").on("click", function boardClearer() {
-    //alert("yes, im here");
-    $("li").text("");
-
-  });
-
- //Check the winning pattern
-  function threeInARow($firstSquare, $secondSquare, $thirdSquare) {
-    var firstSquareOwner = $firstSquare.text();
-    var secondSquareOwner = $secondSquare.text();
-    var thirdSquareOwner = $thirdSquare.text();
-
-    if (firstSquareOwner === secondSquareOwner && secondSquareOwner === thirdSquareOwner) {
-      if (firstSquareOwner === "X") {
-        return "X";
-      } else {
-        return "O";
-      }
-      return null;
+    if (turnCount % 2 === 0) {
+      square.text("X");
+      $("#message").text("Your turn O.");
+    } else {
+      square.text("O");
+      $("#message").text("Your turn X.");
     }
+    turnCount ++;
+  });
+
+//Resets the board after a winner is reached
+  $("#reset").click(function boardClearer() {
+//alert("yes, im here");
+  $square.text("");
+  });
+
+//Check the winning pattern
+$(".box").click(function winChecker() {
+  if( $("#square1").text() === "X" && //horizontalX
+    $("#square2").text() === "X" &&
+    $("square3").text() === "X" ) {
+      $("#message").text("Player X wins.");
+  } else if
+    ( $("#square4").text() === "X" &&
+    $("#square5").text() === "X" &&
+    $("#square6").text() === "X" ) {
+      $("#message").text("Player X wins.");
+  } else if
+    ( $("#square7").text() === "X" &&
+    $("#square8").text() === "X" &&
+    $("#square9").text() === "X" ) {
+      $("#message").text("Player X wins.");
+  } else if
+    ( $("#square1").text() === "X" && //verticalX
+    $("#square4").text() === "X" &&
+    $("#square7").text() === "X" ) {
+      $("#message").text("Player X wins.");
+  } else if
+    ( $("#square2").text() === "X" &&
+    $("square5").text() === "X" &&
+    $("square8").text() === "X" ) {
+      $("#message").text("Player X wins.");
+  } else if
+    ( $("#square3").text() === "X" &&
+    $("#square6").text() === "X" &&
+    $("#square9").text() === "X" ) {
+      $("#message").text("Player X wins.");
+  } else if
+    ( $("#square1").text() === "X" && //diagonalX
+    $("#square5").text() === "X" &&
+    $("#square9").text() === "X" ) {
+      $("#message").text("Player X wins.");
+  } else if
+    ( $("#square3").text() === "X" &&
+    $("#square5").text() === "X" &&
+    $("#square7").text() === "X" ) {
+      $("#message").text("Player X wins.");
+  } else if
+    ( $("#square1").text() === "Y" && //horizontalY
+    $("#square2").text() === "Y" &&
+    $("square3"),text() === "Y" ) {
+      $("#message").text("Player Y wins.");
+  } else if
+    ( $("#square4").text() === "Y" &&
+    $("#square5").text() === "Y" &&
+    $("square6"),text() === "Y" ) {
+      $("#message").text("Player Y wins.");
+  } else if
+    ( $("#square7").text() === "Y" &&
+    $("#square8").text() === "Y" &&
+    $("square9"),text() === "Y" ) {
+      $("#message").text("Player Y wins.");
+  } else if
+    ( $("#square1").text() === "Y" && //verticalY
+    $("#square4").text() === "Y" &&
+    $("square7"),text() === "Y" ) {
+      $("#message").text("Player Y wins.");
+  } else if
+    ( $("#square2").text() === "Y" &&
+    $("square5").text() === "Y" &&
+    $("square8").text() === "Y" ) {
+      $("#message").text("Player Y wins.");
+  } else if
+    ( $("#square3").text() === "Y" &&
+    $("#square6").text() === "Y" &&
+    $("#square9").text() === "Y" ) {
+      $("#message").text("Player Y wins.");
+  } else if
+    ( $("#square1").text() === "Y" && //diagonalY
+    $("#square5").text() === "Y" &&
+    $("#square9").text() === "Y" ) {
+      $("#message").text("Player Y wins.");
+  } else if
+    ( $("#square3").text() === "Y" &&
+    $("#square5").text() === "Y" &&
+    $("#square7").text() === "Y" ) {
+      $("#message").text("Player Y wins.");
+  } else if
+    ( turnCount === 9 ) {                 //??
+      $("#message").text("It's a tie.");
   }
-
-  function rowWinner() {
-    var topRow = threeInARow($square.eq(0), $square.eq(1), $square.eq(2));
-    var middleRow = threeInARow($square.eq(3), $square.eq(4), $square.eq(5));
-    var bottomRow = threeInARow($square.eq(6), $square.eq(7), $square.eq(8));
-    return topRow || middleRow || bottomRow;
-  }
-
-
-
+});
 
 });
