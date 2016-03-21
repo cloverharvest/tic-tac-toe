@@ -70,45 +70,45 @@ $(".box").click(function winChecker() {
     $("#square7").text() === "X" ) {
       $("#message").text("Player X wins.");
   } else if
-    ( $("#square1").text() === "Y" && //horizontalY
-    $("#square2").text() === "Y" &&
-    $("square3").text() === "Y" ) {
-      $("#message").text("Player Y wins.");
+    ( $("#square1").text() === "O" && //horizontalO
+    $("#square2").text() === "O" &&
+    $("square3").text() === "O" ) {
+      $("#message").text("Player O wins.");
   } else if
-    ( $("#square4").text() === "Y" &&
-    $("#square5").text() === "Y" &&
-    $("square6").text() === "Y" ) {
-      $("#message").text("Player Y wins.");
+    ( $("#square4").text() === "O" &&
+    $("#square5").text() === "O" &&
+    $("square6").text() === "O" ) {
+      $("#message").text("Player O wins.");
   } else if
-    ( $("#square7").text() === "Y" &&
-    $("#square8").text() === "Y" &&
-    $("square9").text() === "Y" ) {
-      $("#message").text("Player Y wins.");
+    ( $("#square7").text() === "O" &&
+    $("#square8").text() === "O" &&
+    $("square9").text() === "O" ) {
+      $("#message").text("Player O wins.");
   } else if
-    ( $("#square1").text() === "Y" && //verticalY
-    $("#square4").text() === "Y" &&
-    $("square7").text() === "Y" ) {
-      $("#message").text("Player Y wins.");
+    ( $("#square1").text() === "O" && //verticalO
+    $("#square4").text() === "O" &&
+    $("square7").text() === "O" ) {
+      $("#message").text("Player O wins.");
   } else if
-    ( $("#square2").text() === "Y" &&
-    $("square5").text() === "Y" &&
-    $("square8").text() === "Y" ) {
-      $("#message").text("Player Y wins.");
+    ( $("#square2").text() === "O" &&
+    $("square5").text() === "O" &&
+    $("square8").text() === "O" ) {
+      $("#message").text("Player O wins.");
   } else if
-    ( $("#square3").text() === "Y" &&
-    $("#square6").text() === "Y" &&
-    $("#square9").text() === "Y" ) {
-      $("#message").text("Player Y wins.");
+    ( $("#square3").text() === "O" &&
+    $("#square6").text() === "O" &&
+    $("#square9").text() === "O" ) {
+      $("#message").text("Player O wins.");
   } else if
-    ( $("#square1").text() === "Y" && //diagonalY
-    $("#square5").text() === "Y" &&
-    $("#square9").text() === "Y" ) {
-      $("#message").text("Player Y wins.");
+    ( $("#square1").text() === "O" && //diagonalY
+    $("#square5").text() === "O" &&
+    $("#square9").text() === "O" ) {
+      $("#message").text("Player O wins.");
   } else if
-    ( $("#square3").text() === "Y" &&
-    $("#square5").text() === "Y" &&
-    $("#square7").text() === "Y" ) {
-      $("#message").text("Player Y wins.");
+    ( $("#square3").text() === "O" &&
+    $("#square5").text() === "O" &&
+    $("#square7").text() === "O" ) {
+      $("#message").text("Player O wins.");
   } else if
     ( turnCount === 9 ) {                 //??
       $("#message").text("It's a tie.");
