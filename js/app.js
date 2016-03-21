@@ -1,6 +1,5 @@
 //Issues:
 //Does not stop after 9 moves
-//Not able to declare winner
 //Need to make X and O bigger
 
 $(document).ready(function() {
