@@ -1,6 +1,5 @@
 //Issues:
 //Does not stop after 9 moves
-//Need to make X and O bigger
 
 $(document).ready(function() {
 
@@ -11,15 +10,21 @@ $(document).ready(function() {
 //TurnTaker
   $(".box").click(function turnTaker() {
     var square = $(this);
-    if (turnCount % 2 === 0) {
-      square.text("X");
-      $("#message").text("Your turn O.");
-    } else {
-      square.text("O");
-      $("#message").text("Your turn X.");
-    }
-    turnCount ++;
+      if ($(this).html() === '') {
+        if (turnCount % 2 === 0) {
+          square.text("X");
+          $("#message").text("Your turn O.");
+        } else {
+          square.text("O");
+          $("#message").text("Your turn X.");
+        }
+        turnCount ++;
+      } else {
+        return false;
+      }
   });
+
+
 
 //Resets the board after a winner is reached
   $("#reset").click(function boardClearer() {
